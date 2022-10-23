@@ -7,7 +7,7 @@
 */
 
 * { /*reset, ou seja regra com seletor asteristico*/
-font-family: 'open sans', 'Helvetica Neue', sans-serif;
+font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; 
 padding: 0px;
 margin: 0px;
 box-sizing: border-box;
@@ -65,15 +65,39 @@ div#formulario > p {
 
 form > div.campo {
     background-color: #5f2c82;
+    border: 2px solid #5f2c82;
     display: block;
     width: 100%;
     height: 40px;
-    border-radius: 5px;
+    border-radius: 8px;
     margin: 5px 0px;
 }
 
 div.campo > label {
     display: none;
+}
+
+div.campo > i {
+    color: white;
+    font-size: 2em;
+    width: 40px;
+    padding: 5px;
+}
+
+div.campo > input {
+    background-color: #94cfcd;
+    font-size: 1em;
+    width: calc(100% - 45px);
+    height: 100%;
+    transform: translateY(-12px);
+    border: 0px;
+    border-radius: 8px;
+    padding: 4px;
+}
+
+div.campo > input:focus-within {
+    background-color: white;
+    border: none;
 }
 
 form > input[type=submit] {
@@ -92,11 +116,11 @@ form > input[type=submit]:hover {
     background-color: #2d6462;
 }
 
-form > a.botao {
+form > a.botao { 
     display: block;
     text-align: center;
     font-size: 1em;
-    width: 100%;
+    width: 100%; 
     height: 40px;
     padding-top: 5px;
     margin-top: 5px;
